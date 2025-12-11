@@ -2,7 +2,7 @@
 
 [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/jennyortiz502-lab/NL2SQL/archive/refs/heads/main.zip)
 
-# Chatbot de lenguaje natural a SQL
+# Chatbot de Language natural a SQL
 An interactive application based on Streamlit that converts natural language questions into SQL queries using large language models (LLMs).
 
 ---
