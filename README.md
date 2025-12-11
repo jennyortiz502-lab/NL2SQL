@@ -1,3 +1,22 @@
+# Chatbot de lenguaje natural a SQL
+An interactive application based on Streamlit that converts natural language questions into SQL queries using large language models (LLMs).
+
+---
+# Description
+This project implements an intelligent chatbot that allows users to query MySQL databases using natural language. The application automatically translates questions into SQL, executes queries, and can return results in both table format and natural language responses.
+
+---
+# Key Features
+* NL→SQL conversion: Translates natural language questions into valid SQL queries
+* Multilingual Support: Supports English, Spanish, Portuguese, and French
+* Multiple LLM Models: Compatible with various models from Meta, Cohere, and Mistral
+* Query Self-Repair: Automatically detects and corrects SQL errors (up to 3 attempts)
+* Natural Language Responses: Turn tabular results into conversational responses
+* Chat Interface: Persistent Conversation History
+* Schema Selection: Allows you to choose between different database schemas.
+* Security: Blocks destructive operations (INSERT, UPDATE, DELETE, DROP, etc.)
+* SQL visualization: Option to display generated SQL queries
+
 # Stack to create MySQL DEMO AI
 
 [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/jennyortiz502-lab/NL2SQL/archive/refs/heads/main.zip)
