@@ -1,3 +1,7 @@
+# Stack to create MySQL DEMO AI
+
+[![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/jennyortiz502-lab/NL2SQL/archive/refs/heads/main.zip)
+
 # Chatbot de lenguaje natural a SQL
 An interactive application based on Streamlit that converts natural language questions into SQL queries using large language models (LLMs).
 
@@ -17,11 +21,7 @@ This project implements an intelligent chatbot that allows users to query MySQL 
 * Security: Blocks destructive operations (INSERT, UPDATE, DELETE, DROP, etc.)
 * SQL visualization: Option to display generated SQL queries
 
-# Stack to create MySQL DEMO AI
-
-[![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/jennyortiz502-lab/NL2SQL/archive/refs/heads/main.zip)
-
-
+---
 ### Example Table Definition
 
 | TABLE\_NAME    | COLUMN\_NAME  | COLUMN\_TYPE       | COLUMN\_COMMENT                                                                                                    |
