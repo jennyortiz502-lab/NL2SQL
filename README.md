@@ -15,7 +15,6 @@ This project implements an intelligent chatbot that allows users to query MySQL 
 * Multilingual Support: Supports English, Spanish, Portuguese, and French
 * Multiple LLM Models: Compatible with various models from Meta, Cohere, and Mistral
 * Query Self-Repair: Automatically detects and corrects SQL errors (up to 3 attempts)
-* Natural Language Responses: Turn tabular results into conversational responses
 * Chat Interface: Persistent Conversation History
 * Schema Selection: Allows you to choose between different database schemas.
 * Security: Blocks destructive operations (INSERT, UPDATE, DELETE, DROP, etc.)
