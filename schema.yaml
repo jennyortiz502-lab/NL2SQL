@@ -1,0 +1,124 @@
+title: "NL2SQL - Despliegue con MySQL HeatWave en OCI"
+description: "Despliega la aplicación NL2SQL con MySQL HeatWave, HeatWave Cluster y Streamlit"
+schemaVersion: 1.1.0
+version: "1.0.0"
+
+variableGroups:
+  - title: "Configuración Requerida"
+    visible: true
+    variables:
+      - compartment_ocid
+      - region
+      - mysql_admin_password
+      - ssh_public_key
+
+  - title: "Configuración de Red"
+    visible: true
+    variables:
+      - vcn_cidr_block
+      - public_subnet_cidr
+      - private_subnet_cidr
+
+  - title: "Configuración de MySQL HeatWave"
+    visible: true
+    variables:
+      - mysql_admin_username
+      - mysql_db_name
+
+  - title: "Configuración de Compute"
+    visible: true
+    variables:
+      - compute_shape
+      - compute_ocpus
+      - compute_memory_in_gbs
+
+  - title: "Configuración Avanzada"
+    visible: true
+    variables:
+      - heatwave_model_id
+
+variables:
+  compartment_ocid:
+    type: oci:identity:compartment:id
+    title: "Compartment"
+    description: "Compartment donde se desplegarán los recursos"
+    required: true
+
+  region:
+    type: oci:identity:region:name
+    title: "Región"
+    description: "Región donde se desplegarán los recursos"
+    required: true
+
+  mysql_admin_password:
+    type: password
+    title: "Contraseña de MySQL"
+    description: "Mínimo 8 caracteres, debe contener mayúsculas, minúsculas y números"
+    required: true
+    minLength: 8
+    maxLength: 32
+    pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,32}$"
+    confirmation: true
+
+  vcn_cidr_block:
+    type: string
+    title: "CIDR del VCN"
+    default: "10.0.0.0/16"
+    required: false
+
+  public_subnet_cidr:
+    type: string
+    title: "CIDR de Subnet Pública"
+    default: "10.0.1.0/24"
+    required: false
+
+  private_subnet_cidr:
+    type: string
+    title: "CIDR de Subnet Privada"
+    default: "10.0.2.0/24"
+    required: false
+
+  mysql_admin_username:
+    type: string
+    title: "Usuario Administrador MySQL"
+    default: "admin"
+    required: false
+
+  mysql_db_name:
+    type: string
+    title: "Nombre de la Base de Datos"
+    default: "nl2sql_db"
+    required: false
+
+  compute_shape:
+    type: oci:core:instanceshape:name
+    title: "Shape de la Instancia"
+    default: "VM.Standard.E4.Flex"
+    required: false
+
+  compute_ocpus:
+    type: integer
+    title: "Número de OCPUs"
+    default: 2
+    minimum: 1
+    maximum: 64
+    required: false
+
+  compute_memory_in_gbs:
+    type: integer
+    title: "Memoria (GB)"
+    default: 16
+    minimum: 1
+    maximum: 1024
+    required: false
+
+  heatwave_model_id:
+    type: enum
+    title: "Modelo GenAI de HeatWave"
+    default: "mistral-7b-instruct-v1"
+    enum:
+      - "mistral-7b-instruct-v1"
+      - "llama-2-70b-chat"
+    required: false
+
+

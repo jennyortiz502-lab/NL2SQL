@@ -8,12 +8,21 @@ import json
 # Configuration
 # -----------------------------------------------------------------------------
 
-DB_HOST = "10.0.1.54"   # Database Host
-DB_PORT = 3306          # Database port
-DB_USER = "admin"       # Database user
-DB_PASSWORD = "@Mysqlse2025"  # Database password
-DB_NAME = "airportdb"   # Default target schema
+import os
+from dotenv import load_dotenv
+
+# Load environment variables
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+DB_HOST = os.getenv('HW_HOST')
+DB_PORT = int(os.getenv('DB_PORT', 3306))
+DB_USER = os.getenv('HW_DB_USER')
+DB_PASSWORD = os.getenv('HW_DB_PASS')
+DB_NAME = os.getenv('HW_DB_NAME')
 DBSYSTEM_SCHEMA = DB_NAME
+
+
 
 # -----------------------------------------------------------------------------
 # Model Configuration
