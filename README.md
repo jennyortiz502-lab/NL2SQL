@@ -21,6 +21,8 @@
 | airport        | airport\_id   | smallint           | Unique identifier for each airport.                                                                                |
 
 
+---
+
 ## How the App works:
 The flowchart below outlines the full workflow of how natural language queries (in any language) are processed and transformed into SQL queries to retrieve data from a database.
 <img src="resources/diagram.svg" alt="App Flow Diagram" width="100%"/>
