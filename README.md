@@ -25,5 +25,6 @@
 
 ## How the App works:
 The flowchart below outlines the full workflow of how natural language queries (in any language) are processed and transformed into SQL queries to retrieve data from a database.
+
 <img width="630" height="622" alt="image" src="https://github.com/user-attachments/assets/d66d6888-986a-4bf9-a31c-aeeac889832d" />
 
